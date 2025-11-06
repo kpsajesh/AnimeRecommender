@@ -10,3 +10,7 @@ setup(
     packages=find_packages(),
     install_requires = requirements,
 )
+#Steps to run
+#a. python -m venv venv
+#b. venv\scripts\activate
+#c.	pip install -e .
