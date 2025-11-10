@@ -1,0 +1,109 @@
+2025-11-10 01:09:06,721 - INFO - Intializing Recommdation Pipeline
+2025-11-10 01:09:06,991 - INFO - Use pytorch device_name: cpu
+2025-11-10 01:09:06,991 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-11-10 01:09:12,968 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-11-10 01:09:16,325 - INFO - Pipleine intialized sucessfully...
+2025-11-10 01:13:12,015 - INFO - Received a query Light hearted anime with school setting
+2025-11-10 01:13:12,015 - ERROR - Failed to get recommendation 'AnimeRecommender' object has no attribute 'get_recommendation'
+Traceback (most recent call last):
+  File "F:\1.Dev\GenAI\09.LLM_Ops\AnimeRecommender\pipeline\recommendation_pipeline.py", line 30, in recommend
+    recommendation = self.recommender.get_recommendation(query)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'AnimeRecommender' object has no attribute 'get_recommendation'. Did you mean: 'get_recommendations'?
+2025-11-10 01:27:19,497 - INFO - Intializing Recommdation Pipeline
+2025-11-10 01:27:19,498 - INFO - Use pytorch device_name: cpu
+2025-11-10 01:27:19,498 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-11-10 01:27:22,248 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-11-10 01:27:23,352 - INFO - Pipleine intialized sucessfully...
+2025-11-10 01:27:33,458 - INFO - Received a query Light hearted anime with school setting
+2025-11-10 01:27:33,458 - ERROR - Failed to get recommendation 'AnimeRecommender' object has no attribute 'chain'
+Traceback (most recent call last):
+  File "F:\1.Dev\GenAI\09.LLM_Ops\AnimeRecommender\pipeline\recommendation_pipeline.py", line 30, in recommend
+    recommendation = self.recommender.get_recommendations(query)
+  File "F:\1.Dev\GenAI\09.LLM_Ops\AnimeRecommender\src\recommender.py", line 39, in get_recommendations
+    return self.chain.invoke({"query": query})
+           ^^^^^^^^^^
+AttributeError: 'AnimeRecommender' object has no attribute 'chain'
+2025-11-10 01:30:23,025 - INFO - Intializing Recommdation Pipeline
+2025-11-10 01:30:23,027 - INFO - Use pytorch device_name: cpu
+2025-11-10 01:30:23,027 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-11-10 01:30:26,342 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-11-10 01:30:27,253 - INFO - Pipleine intialized sucessfully...
+2025-11-10 01:30:38,946 - INFO - Received a query Light hearted anime with school setting
+2025-11-10 01:30:38,949 - ERROR - Failed to get recommendation 'dict' object has no attribute 'replace'
+Traceback (most recent call last):
+  File "F:\1.Dev\GenAI\09.LLM_Ops\AnimeRecommender\pipeline\recommendation_pipeline.py", line 30, in recommend
+    recommendation = self.recommender.get_recommendations(query)
+  File "F:\1.Dev\GenAI\09.LLM_Ops\AnimeRecommender\src\recommender.py", line 39, in get_recommendations
+    return self.qa_chain.invoke({"query": query})
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "F:\1.Dev\GenAI\09.LLM_Ops\AnimeRecommender\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3088, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "F:\1.Dev\GenAI\09.LLM_Ops\AnimeRecommender\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3809, in invoke
+    key: future.result()
+         ~~~~~~~~~~~~~^^
+  File "C:\Program Files\Python313\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Program Files\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "F:\1.Dev\GenAI\09.LLM_Ops\AnimeRecommender\venv\Lib\site-packages\langchain_core\runnables\base.py", line 3792, in _invoke_step
+    return context.run(
+           ~~~~~~~~~~~^
+        step.invoke,
+        ^^^^^^^^^^^^
+        input_,
+        ^^^^^^^
+        child_config,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "F:\1.Dev\GenAI\09.LLM_Ops\AnimeRecommender\venv\Lib\site-packages\langchain_core\retrievers.py", line 216, in invoke
+    result = self._get_relevant_documents(
+        input, run_manager=run_manager, **kwargs_
+    )
+  File "F:\1.Dev\GenAI\09.LLM_Ops\AnimeRecommender\venv\Lib\site-packages\langchain_core\vectorstores\base.py", line 1033, in _get_relevant_documents
+    docs = self.vectorstore.similarity_search(query, **kwargs_)
+  File "F:\1.Dev\GenAI\09.LLM_Ops\AnimeRecommender\venv\Lib\site-packages\langchain_community\vectorstores\chroma.py", line 350, in similarity_search
+    docs_and_scores = self.similarity_search_with_score(
+        query, k, filter=filter, **kwargs
+    )
+  File "F:\1.Dev\GenAI\09.LLM_Ops\AnimeRecommender\venv\Lib\site-packages\langchain_community\vectorstores\chroma.py", line 439, in similarity_search_with_score
+    query_embedding = self._embedding_function.embed_query(query)
+  File "F:\1.Dev\GenAI\09.LLM_Ops\AnimeRecommender\venv\Lib\site-packages\langchain_huggingface\embeddings\huggingface.py", line 172, in embed_query
+    return self._embed([text], embed_kwargs)[0]
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\1.Dev\GenAI\09.LLM_Ops\AnimeRecommender\venv\Lib\site-packages\langchain_huggingface\embeddings\huggingface.py", line 124, in _embed
+    texts = [x.replace("\n", " ") for x in texts]
+             ^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'replace'
+2025-11-10 01:38:18,768 - INFO - Intializing Recommdation Pipeline
+2025-11-10 01:38:18,769 - INFO - Use pytorch device_name: cpu
+2025-11-10 01:38:18,769 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-11-10 01:38:21,688 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-11-10 01:38:22,895 - INFO - Pipleine intialized sucessfully...
+2025-11-10 01:38:34,105 - INFO - Received a query Enter your anime preferences. eg: Light hearted anime with school setting
+2025-11-10 01:38:36,834 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-10 01:38:36,981 - INFO - Recommendation generated sucessfully...
+2025-11-10 01:39:11,605 - INFO - Received a query  Light hearted anime with school setting
+2025-11-10 01:39:12,676 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-10 01:39:12,680 - INFO - Recommendation generated sucessfully...
+2025-11-10 01:40:36,804 - INFO - Intializing Recommdation Pipeline
+2025-11-10 01:40:36,806 - INFO - Use pytorch device_name: cpu
+2025-11-10 01:40:36,806 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-11-10 01:40:39,401 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-11-10 01:40:40,501 - INFO - Pipleine intialized sucessfully...
+2025-11-10 01:40:50,793 - INFO - Received a query Light hearted anime with school setting
+2025-11-10 01:40:51,588 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-10 01:40:51,617 - INFO - Recommendation generated sucessfully...
+2025-11-10 01:42:42,216 - INFO - Received a query I want similar anime like naruto
+2025-11-10 01:42:43,027 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-10 01:42:43,030 - INFO - Recommendation generated sucessfully...
+2025-11-10 01:43:20,197 - INFO - Received a query Light hearted anime with school setting
+2025-11-10 01:43:21,073 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-10 01:43:21,075 - INFO - Recommendation generated sucessfully...
+2025-11-10 01:43:33,076 - INFO - Received a query I want similar anime to naruto
+2025-11-10 01:43:33,827 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-10 01:43:33,829 - INFO - Recommendation generated sucessfully...
