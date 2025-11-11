@@ -107,3 +107,17 @@ AttributeError: 'dict' object has no attribute 'replace'
 2025-11-10 01:43:33,076 - INFO - Received a query I want similar anime to naruto
 2025-11-10 01:43:33,827 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 2025-11-10 01:43:33,829 - INFO - Recommendation generated sucessfully...
+2025-11-10 02:06:44,815 - INFO - Intializing Recommdation Pipeline
+2025-11-10 02:06:44,816 - INFO - Use pytorch device_name: cpu
+2025-11-10 02:06:44,816 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-11-10 02:06:47,471 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-11-10 02:06:48,445 - INFO - Pipleine intialized sucessfully...
+2025-11-10 02:06:58,167 - INFO - Received a query Light hearted anime with school setting
+2025-11-10 02:06:59,162 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-10 02:06:59,189 - INFO - Recommendation generated sucessfully...
+2025-11-10 02:10:20,919 - INFO - Received a query show similar anime
+2025-11-10 02:10:22,647 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-10 02:10:22,652 - INFO - Recommendation generated sucessfully...
+2025-11-10 02:11:34,632 - INFO - Received a query GIve me similar anime to Saiki 
+2025-11-10 02:11:35,444 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-10 02:11:35,446 - INFO - Recommendation generated sucessfully...
