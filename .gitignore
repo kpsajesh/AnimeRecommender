@@ -1,4 +1,6 @@
 /.env
+.env
 /venv.env
 venv/
-log/
+logs/
+ANIME_RECOMMENDER.egg-info
