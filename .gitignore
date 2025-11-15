@@ -4,3 +4,4 @@
 venv/
 logs/
 ANIME_RECOMMENDER.egg-info
+values.yaml
